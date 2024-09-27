@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --custome-blue-color: #4294ff;
+  --custome-black-color: #131313;
+  --custome-orange-color: #10b981;
+  --custome-green-hover-color: #047857;
+  --custome-orange-color: #ffb320;
+}
+
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.cata {
+  position: relative;
+  margin-top: 28px;
+  margin-left: 29px;
+  z-index: 3;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  padding: 6px 25px;
+}
+
+.cata.racing {
+  background: #694eae;
+}
+
+.cata.adventure {
+  background: #40abf5;
+}
+
+.cata.new {
+  background: #ff205f;
+}
+
+.cata.strategy {
+  background: #4eae60;
+}
+
+.header-section {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+body {
+  /* background: linear-gradient(90deg, #3a0909 0%, #000000 100%); */
+  /* background: linear-gradient(135deg, #1e3a5f, #5dade2); */
+  /* background: linear-gradient(135deg, #2a0038, #8e44ad); */
+  /* background: linear-gradient(135deg, #1c1c1c, #1abc9c); */
+  /* background: linear-gradient(135deg, #0a0a23, #3498db); */
+  /* background: linear-gradient(135deg, #004d40, #5dade2); */
+  /* background: linear-gradient(135deg, #34495e, #8e44ad); */
+}
+
+/* start header-navbar */
+header#header-navbar {
+  height: 80px;
+  background-color: var(--custome-black-color);
+  height: 81px;
+  clear: both;
+  overflow: hidden;
+  padding: 18px 0;
+  border-bottom: 1px solid #ffb320;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-size: 22px;
+
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+/* end header-navbar */
+
+main {
+  height: calc(100vh - 80px);
+  /* background: linear-gradient(90deg, #3a0909 0%, #000000 100%); */
+}
+/* start hero */
+section#hero {
+  height: 100%;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      line-height: 2.6;
+      max-width: 750px;
+
+      h1 {
+        color: #ddd;
+        font-size: 35px;
+      }
+      p {
+        color: #cecdcd;
+        font-size: 18px;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        gap: 20px;
+
+        button {
+          border: none;
+          border-radius: 8px;
+          background: var(--custome-orange-color);
+          color: #fff;
+          padding: 14px 20px;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      .social-media {
+        color: white;
+
+        .social-icons {
+          font-size: 32px;
+          i {
+            transition: 0.3s;
+            color: #ddd;
+            cursor: pointer;
+            &:hover {
+              color: var(--custome-orange-color);
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    #img-hero {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, #1a1919c7 0%, #0000008f 100%), url(./images/hero.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+/* end hero */
+
+/*  */
+section#image-info {
+  padding-top: 97px;
+  padding-bottom: 97px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 635px) {
+      gap: 20px;
+    }
+
+    .card {
+      height: 415px;
+      width: 295px;
+      position: relative;
+      background-color: #1313136b;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+      .box {
+        padding: 0 26px 24px;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p {
+          color: #ddd;
+        }
+
+        span {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+/*  */
+
+/*  */
+section#recent-games {
+  padding-top: 97px;
+  padding-bottom: 97px;
+  position: relative;
+  background-color: #eef2f6;
+  overflow: hidden;
+
+  .img-aside {
+    img {
+      position: absolute;
+
+      &:first-child {
+        left: -150px;
+        top: -39px;
+        width: 400px;
+        height: 130%;
+      }
+
+      &:last-child {
+        right: -150px;
+        top: -39px;
+        width: 400px;
+        height: 130%;
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+
+    .card {
+      .img-cata {
+        position: relative;
+
+        img {
+          height: 200px;
+          width: 100%;
+        }
+
+        .cata {
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      .box {
+        padding: 34px 22px 20px;
+        background: #fff;
+        border: 1px solid #d6dee7;
+        border-top: none;
+        position: relative;
+
+        .heart {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 30px;
+          width: 30px;
+          background-color: #ff205f;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+/*  */
+
+/*  */
+section#tournaments {
+  background-color: #393939;
+  padding-top: 97px;
+  padding-bottom: 97px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: #252525;
+      .tournaments-header {
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+        background-color: #ffb320;
+        padding: 8px 20px;
+      }
+
+      .box {
+        padding: 38px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+
+        img {
+          width: 170px;
+          height: 170px;
+          object-fit: cover;
+        }
+
+        .text {
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          font-size: 12px;
+
+          h4 {
+            color: #ffb320;
+            font-size: 24px;
+          }
+
+          ul {
+            li {
+              color: white;
+              span {
+                color: #9a9a9a;
+              }
+            }
+          }
+
+          p {
+            color: #9a9a9a;
+
+            span {
+              color: #ffb320;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*  */
+/*  */
+section#last-section {
+  padding: 97px 0;
+  background-color: white;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin: auto;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .img-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .img-container:hover img {
+    transform: scale(1.1);
+  }
+
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .img-container:hover .social-icons {
+    opacity: 1;
+  }
+
+  .social-icons a {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+  }
+
+  h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+}
+/*  */
+/*  */
+footer#footer {
+  padding: 18px 0;
+  background-color: #252525;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #aeaeae;
+    flex-wrap: wrap;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      li {
+        a {
+          color: #aeaeae;
+        }
+      }
+    }
+  }
+}
+/*  */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>gamer</title>
+  </head>
+  <body>
+    <header id="header-navbar">
+      <div class="container">
+        <div class="logo">
+          <img class="" src="../images/loo.webp" alt="" />
+        </div>
+        <ul>
+          <li><a href="/" id="home-link">Home</a></li>
+          <li><a href="/" id="about-link">About</a></li>
+          <li><a href="/filter_page/index.html" id="all-game">All Game</a></li>
+          <li><a href="#" id="contact-link">Contact</a></li>
+          <li id="login"><a href="../login/login.html" id="login-link">Login</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="content"></div>
+      <section class="search-section">
+        <div class="search">
+          <input
+            type="search"
+            name="search"
+            id="search-input"
+            placeholder="search with games here"
+          />
+          <button id="search-button">search</button>
+        </div>
+        <div class="filter-buttons">
+          <button class="active btn all" id="active">all</button>
+          <button class="btn action">action</button>
+          <button class="btn adv">adventure</button>
+          <button class="btn think">thinking</button>
+        </div>
+      </section>
+      <section class="game-cards">
+        <!-- ***************************************************************************************** -->
+        <div class="card">
+          <img src="images/Valorant-1833661.jpg" alt="Game 1" class="card-image" />
+          <h3 class="card-title">valorant</h3>
+          <button class="play-button valo">Play</button>
+        </div>
+        <!-- ***************************************************************************************** -->
+        <div class="card">
+          <img src="images/515386.jpg" alt="Game 2" class="card-image" />
+          <h3 class="card-title">uncharted 4</h3>
+          <button class="play-button unch">Play</button>
+        </div>
+        <!-- ***************************************************************************************** -->
+        <div class="card">
+          <img src="images/1401_1_thumb_200.jpg" alt="Game 3" class="card-image" />
+          <h3 class="card-title">connect 4</h3>
+          <button class="play-button con">Play</button>
+        </div>
+        <!-- ***************************************************************************************** -->
+        <div class="card">
+          <img src="images/call-of-duty-warzone-2 1920x1080.jpg" alt="Game 4" class="card-image" />
+          <h3 class="card-title cod">call of duty "warzone"</h3>
+          <button class="play-button COD">Play</button>
+        </div>
+        <!-- ***************************************************************************************** -->
+      </section>
+    </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+:root {
+  --custome-blue-color: #4294ff;
+  --custome-black-color: #1e1e1e;
+  --custome-green-color: #10b981;
+  --custome-green-hover-color: #047857;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--custome-black-color);
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0 20px 0;
+  color: blue;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: aqua;
+}
+
+.board {
+  position: relative;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 10px solid var(--custome-blue-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 720px;
+  background-color: var(--custome-blue-color);
+
+  footer.footer {
+    position: absolute;
+    bottom: -30px;
+    width: 111%;
+    height: 20px;
+    background-color: var(--custome-blue-color);
+    left: -40px;
+  }
+}
+
+ul {
+  display: grid;
+  place-items: center;
+}
+
+/* every cicle */
+ul p {
+  margin: 5px;
+  width: 75px;
+  height: 75px;
+  border: 2px solid var(--custome-blue-color);
+  box-shadow: 0px 0px 2px 0px #000;
+  border-radius: 50%;
+  background-color: var(--custome-black-color);
+
+  /* img  */
+  img {
+    width: 100%;
+  }
+}
+
+ul:hover {
+  cursor: pointer;
+  background-color: rgb(98, 136, 238);
+}
+
+@media (max-width: 700px) {
+  .board {
+    width: 500px;
+  }
+  ul p {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 520px) {
+  .board {
+    width: 400px;
+  }
+  ul p {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 420px) {
+  .board {
+    width: 320px;
+  }
+  ul p {
+    width: 30px;
+    height: 30px;
+  }
+}
